@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.006001;
+use 5.006;
 
 use ExtUtils::MakeMaker;
 
@@ -14,7 +14,7 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Path-ExpandTilde",
   "LICENSE" => "artistic_2",
-  "MIN_PERL_VERSION" => "5.006001",
+  "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Path::ExpandTilde",
   "PREREQ_PM" => {
     "Carp" => 0,

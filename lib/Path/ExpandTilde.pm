@@ -19,6 +19,9 @@ use constant BSD_GLOB_FLAGS => GLOB_NOCHECK | GLOB_QUOTE | GLOB_TILDE | GLOB_ERR
 # File::Glob did not try %USERPROFILE% (set in Windows NT derivatives) for ~ before 5.16
 use constant WINDOWS_USERPROFILE => $^O eq 'MSWin32' && $] < 5.016;
 
+# File::Glob does not have bsd_glob on 5.6.0
+BEGIN { *bsd_glob = \&File::Glob::glob if $] == 5.006 }
+
 sub expand_tilde {
   my ($dir) = @_;
   return undef unless defined $dir;

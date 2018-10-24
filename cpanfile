@@ -1,4 +1,4 @@
-requires 'perl' => '5.006001';
+requires 'perl' => '5.006';
 requires 'Carp';
 requires 'Exporter';
 requires 'File::Glob';
