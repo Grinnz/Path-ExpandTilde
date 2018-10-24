@@ -48,7 +48,7 @@ sub expand_tilde {
 
 =head1 NAME
 
-Path::ExpandTilde - Expand homedir in file paths that start with tilde (~)
+Path::ExpandTilde - Expand tilde (~) to homedir in file paths
 
 =head1 SYNOPSIS
 
