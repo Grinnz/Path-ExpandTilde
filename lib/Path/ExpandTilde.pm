@@ -19,7 +19,7 @@ use constant BSD_GLOB_FLAGS => GLOB_NOCHECK | GLOB_QUOTE | GLOB_TILDE | GLOB_ERR
 # File::Glob did not try %USERPROFILE% (set in Windows NT derivatives) for ~ before 5.16
 use constant WINDOWS_USERPROFILE => $^O eq 'MSWin32' && $] < 5.016;
 
-# File::Glob does not have bsd_glob on 5.6.0
+# File::Glob does not have bsd_glob on 5.6.0, but its glob was the same then
 BEGIN { *bsd_glob = \&File::Glob::glob if $] == 5.006 }
 
 sub expand_tilde {
@@ -38,7 +38,7 @@ sub expand_tilde {
   } else {
     (my $pattern = $first) =~ s/([\\*?{[])/\\$1/g;
     ($expanded) = bsd_glob($pattern, BSD_GLOB_FLAGS);
-    croak "Failed to expand $dir: $!" if GLOB_ERROR;
+    croak "Failed to expand $first: $!" if GLOB_ERROR;
   }
   return File::Spec->canonpath($dir) if !defined $expanded or $expanded eq $first;
   # replace first segment with new path
