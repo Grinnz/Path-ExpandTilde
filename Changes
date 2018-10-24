@@ -1,4 +1,5 @@
 {{$NEXT}}
+  - More fixes for tests
 
 0.002     2018-10-24 12:32:17 EDT
   - Fix identifying system users in tests
