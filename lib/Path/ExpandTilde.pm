@@ -7,7 +7,7 @@ use Exporter;
 use File::Glob ':glob';
 use File::Spec;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 our @ISA = 'Exporter';
 our @EXPORT = 'expand_tilde';
