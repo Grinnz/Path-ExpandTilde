@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use Carp 'croak';
 use Exporter;
-use File::Glob ':bsd_glob';
+use File::Glob ':glob';
 use File::Spec;
 
 our $VERSION = '0.001';
