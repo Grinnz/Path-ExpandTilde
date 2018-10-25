@@ -84,6 +84,10 @@ L<File::Spec/"canonpath"> either way.
 The algorithm should be portable to most operating systems supported by Perl,
 though the home directory may not be found by C<bsd_glob> on some.
 
+=head1 SEE ALSO
+
+L<File::HomeDir>
+
 =head1 BUGS
 
 Report any issues on the public bugtracker.
